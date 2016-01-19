@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m5p-Yu-hVo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="H4F-1G-F6K">
+            <objects>
+                <tableViewController id="m5p-Yu-hVo" customClass="KQTableViewController" customModule="ProtocolMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" id="EBm-eA-SSu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hehe" rowHeight="81" id="xFu-1P-QBv" customClass="ContactTableViewCell" customModule="ProtocolMVVM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xFu-1P-QBv" id="MhU-7B-UFv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="80.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OqU-lJ-e31">
+                                            <rect key="frame" x="20" y="5" width="115" height="70.5"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="115" id="Dra-kE-cUN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ike-Oi-Jjf">
+                                            <rect key="frame" x="155" y="10" width="437" height="60.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ike-Oi-Jjf" firstAttribute="leading" secondItem="OqU-lJ-e31" secondAttribute="trailing" constant="20" id="2tp-Yu-L06"/>
+                                        <constraint firstAttribute="bottom" secondItem="OqU-lJ-e31" secondAttribute="bottom" constant="5" id="4gv-k0-0mg"/>
+                                        <constraint firstAttribute="bottom" secondItem="ike-Oi-Jjf" secondAttribute="bottom" constant="10" id="708-df-hmw"/>
+                                        <constraint firstItem="ike-Oi-Jjf" firstAttribute="top" secondItem="MhU-7B-UFv" secondAttribute="top" constant="10" id="D1u-HQ-TiX"/>
+                                        <constraint firstItem="OqU-lJ-e31" firstAttribute="leading" secondItem="MhU-7B-UFv" secondAttribute="leading" constant="20" id="eUj-Vl-PvF"/>
+                                        <constraint firstAttribute="trailing" secondItem="ike-Oi-Jjf" secondAttribute="trailing" constant="8" id="fVE-Mv-guX"/>
+                                        <constraint firstItem="OqU-lJ-e31" firstAttribute="top" secondItem="MhU-7B-UFv" secondAttribute="top" constant="5" id="ztt-L0-E5P"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="OqU-lJ-e31" id="9Rl-LB-rRO"/>
+                                    <outlet property="telTextLabel" destination="ike-Oi-Jjf" id="TzV-Gb-HVS"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m5p-Yu-hVo" id="fcg-Nm-PAq"/>
+                            <outlet property="delegate" destination="m5p-Yu-hVo" id="TZt-gb-plA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tch-na-uyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="350"/>
+        </scene>
+    </scenes>
+</document>
